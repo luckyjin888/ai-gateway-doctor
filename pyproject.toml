@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ai-gateway-doctor"
+version = "0.1.0"
+description = "Secret-safe diagnostics for AI agent messaging gateways"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "AI Gateway Doctor contributors" }]
+keywords = ["ai-agent", "telegram", "hermes-agent", "openclaw", "gateway", "diagnostics"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: System :: Systems Administration",
+]
+
+[project.scripts]
+ai-gateway-doctor = "ai_gateway_doctor.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/luckyjin888/ai-gateway-doctor"
+Issues = "https://github.com/luckyjin888/ai-gateway-doctor/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ai_gateway_doctor"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

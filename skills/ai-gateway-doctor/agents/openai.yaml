@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Gateway Doctor"
+  short_description: "Diagnose AI messaging gateway failures safely"
+  default_prompt: "Use $ai-gateway-doctor to diagnose why my AI messaging bot cannot receive or reply."
