@@ -15,6 +15,8 @@ ERROR_PATTERNS = {
     "telegram-conflict": (r"409|conflict.*getupdates", "Another process may be polling the same bot."),
     "telegram-auth": (r"401|unauthorized|invalid token", "Verify the bot token with BotFather."),
     "telegram-forbidden": (r"403|forbidden|bot was blocked", "Check bot membership and Telegram permissions."),
+    "telegram-sender-blocked": (r"blocked unauthorized user", "Check sender, group-chat, and public-access policies separately from Telegram ingress."),
+    "media-delivery-blocked": (r"skipping unsafe media directive path", "Verify the exact generated file exists under an allowed media root; do not trust a model-authored path."),
     "model-quota": (r"429|resource_exhausted|quota exceeded", "Change provider/key or restore model quota."),
     "platform-disabled": (r"not configured/enabled", "Enable the platform and configure its credentials."),
     "stale-home": (r"/Users/[^/]+/.hermes", "Rebuild or rebind the migrated runtime."),
